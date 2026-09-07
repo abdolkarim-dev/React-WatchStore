@@ -1,10 +1,8 @@
 function Footer() {
-  return (    
-     <footer className="border-t border-black/10 bg-white">
+  return (
+    <footer className="border-t border-black/10 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-        <div
-          className="grid gap-12 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-4"
-        >
+        <div className="grid gap-12 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-4">
           {/* <!-- Brand --> */}
           <div className="md:col-span-1 text-center">
             <a href="#" className="text-2xl font-semibold tracking-tight">
@@ -22,22 +20,54 @@ function Footer() {
             <h3 className="text-sm font-semibold">Shop</h3>
 
             <ul className="mt-5 space-y-3 text-sm text-black/50">
-              <li><a href="#" className="hover:text-black">All Watches</a></li>
-              <li><a href="#" className="hover:text-black">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-black">Best Sellers</a></li>
-              <li><a href="#" className="hover:text-black">Collections</a></li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  All Watches
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  New Arrivals
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  Best Sellers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  Collections
+                </a>
+              </li>
             </ul>
           </div>
-{/* 
+          {/* 
           <!-- Company --> */}
           <div>
             <h3 className="text-sm font-semibold">Company</h3>
 
             <ul className="mt-5 space-y-3 text-sm text-black/50">
-              <li><a href="#" className="hover:text-black">About Us</a></li>
-              <li><a href="#" className="hover:text-black">Contact</a></li>
-              <li><a href="#" className="hover:text-black">Shipping</a></li>
-              <li><a href="#" className="hover:text-black">Returns</a></li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  Shipping
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-black">
+                  Returns
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -72,9 +102,7 @@ function Footer() {
           </div>
         </div>
 
-        <div
-          className="mt-14 flex flex-col items-center sm:items-start justify-between gap-3 border-t border-black/10 pt-6 text-xs text-black/40 sm:flex-row"
-        >
+        <div className="mt-14 flex flex-col items-center sm:items-start justify-between gap-3 border-t border-black/10 pt-6 text-xs text-black/40 sm:flex-row">
           <p>© 2026 AbdOlkarim Watch. All rights reserved.</p>
 
           <div className="flex gap-5">

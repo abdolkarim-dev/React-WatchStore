@@ -1,5 +1,5 @@
-function Home() {
+function ProductDetail() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default ProductDetail;

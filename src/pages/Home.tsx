@@ -1,5 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
-
+import productImage from '@/assets/images/products/1.jpg';
+ 
 function Home() {
   return (
     <Fragment>
@@ -7,7 +8,7 @@ function Home() {
         <div className="relative min-h-[600px] overflow-hidden rounded-[2rem] bg-[#dedbd4]">
           {/* <!-- Background --> */}
           <img
-            src="src/images/header_site.png"
+            src="/src/assets/images/header_site.png"
             alt="Premium watch"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -129,7 +130,7 @@ function Home() {
             className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
           >
             <img
-              src="./src/images/products/1.jpg"
+              src="/src/assets/images/products/1.jpg"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               alt="classNameic watches"
             />
@@ -150,7 +151,7 @@ function Home() {
             className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
           >
             <img
-              src="./src/images/products/2.jpg"
+              src="/src/assets/images/products/2.jpg"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               alt="Luxury watches"
             />
@@ -171,7 +172,7 @@ function Home() {
             className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
           >
             <img
-              src="./src/images/products/3.jpg"
+              src="/src/assets/images/products/3.jpg"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               alt="Sport watches"
             />
@@ -223,7 +224,7 @@ function Home() {
                 </button>
 
                 <img
-                  src="./src/images/products/4.jpg"
+                  src="/src/assets/images/products/4.jpg"
                   alt="AbdOlkarim Watch classNameic"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
@@ -244,7 +245,7 @@ function Home() {
                 </button>
 
                 <img
-                  src="./src/images/products/5.jpg"
+                  src="/src/assets/images/products/5.jpg"
                   alt="AbdOlkarim Watch Black"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
@@ -269,7 +270,7 @@ function Home() {
                 </button>
 
                 <img
-                  src="./src/images/products/6.jpg"
+                  src="/src/assets/images/products/6.jpg"
                   alt="AbdOlkarim Watch Gold"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
@@ -296,7 +297,7 @@ function Home() {
                 </button>
 
                 <img
-                  src="./src/images/products/7.jpg"
+                  src="/src/assets/images/products/7.jpg"
                   alt="AbdOlkarim Watch Steel"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />

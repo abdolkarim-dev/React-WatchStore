@@ -1,5 +1,5 @@
-function Home() {
+function calculateTotal() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default calculateTotal;

@@ -1,5 +1,5 @@
-function Home() {
+function Cart() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default Cart;

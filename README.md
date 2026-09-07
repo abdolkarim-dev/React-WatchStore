@@ -1,8 +1,8 @@
-# ⌚ Chrono — Modern Watch Store
+# ⌚ Abdolkarim — Modern Watch Store
 
 A modern, elegant, and fully responsive watch store built with **React, Vite, and Tailwind CSS**.
 
-Chrono is designed with a premium and minimal aesthetic, focusing on clean layouts, smooth interactions, responsive design, performance, and a consistent user experience across desktop, tablet, and mobile devices.
+Abdolkarim is designed with a premium and minimal aesthetic, focusing on clean layouts, smooth interactions, responsive design, performance, and a consistent user experience across desktop, tablet, and mobile devices.
 
 ---
 
@@ -145,7 +145,7 @@ src/
 
 ### Home
 
-The homepage introduces the Chrono brand with:
+The homepage introduces the Abdolkarim brand with:
 
 * Hero section
 * Featured collection
@@ -174,13 +174,13 @@ A visual collection showcase designed to help users explore watches based on dif
 
 ### About
 
-A storytelling-oriented page presenting the philosophy, values, and identity behind Chrono.
+A storytelling-oriented page presenting the philosophy, values, and identity behind Abdolkarim.
 
 ---
 
 ## 📱 Mobile Experience
 
-Chrono was designed with a mobile-first mindset.
+Abdolkarim was designed with a mobile-first mindset.
 
 The mobile interface includes a dedicated navigation experience with:
 
@@ -217,39 +217,20 @@ The goal is to keep the interface visually rich while maintaining a fast and smo
 
 ---
 
-## 🎯 Design Philosophy
-
-Chrono follows a simple design principle:
-
-> **Less noise. More character.**
-
-The interface combines:
-
-* Minimalism
-* Luxury
-* Modern typography
-* Neutral backgrounds
-* Subtle warm accents
-* Large product imagery
-* Generous whitespace
-* Soft borders and rounded corners
-
-The visual language is intentionally restrained so that the watches remain the primary focus.
-
----
+ 
 
 ## 🛠️ Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/chrono-watch-store.git
+git clone https://github.com/your-username/Abdolkarim-watch-store.git
 ```
 
 Navigate to the project:
 
 ```bash
-cd chrono-watch-store
+cd Abdolkarim-watch-store
 ```
 
 Install dependencies:
@@ -292,71 +273,36 @@ You can then open the local address provided in your terminal.
 
 ---
 
-## 📸 Screenshots
+<!-- ## 📸 Screenshots
 
 ### Home
 
 Add your homepage screenshot here:
 
 ```md
-![Chrono Home](./screenshots/home.png)
+![Abdolkarim Home](./screenshots/home.png)
 ```
 
 ### Watches
 
 ```md
-![Chrono Watches](./screenshots/watches.png)
+![Abdolkarim Watches](./screenshots/watches.png)
 ```
 
 ### Collections
 
 ```md
-![Chrono Collections](./screenshots/collections.png)
+![Abdolkarim Collections](./screenshots/collections.png)
 ```
 
 ### About
 
 ```md
-![Chrono About](./screenshots/about.png)
+![Abdolkarim About](./screenshots/about.png)
 ```
 
----
-
-## 🔮 Future Improvements
-
-Planned improvements can include:
-
-* 🛒 Complete shopping cart functionality
-* ❤️ Wishlist persistence
-* 🔐 Authentication
-* 💳 Checkout flow
-* 🔎 Advanced product search
-* 🎛️ Advanced product filtering
-* 📦 Backend integration
-* 🗄️ Product API
-* 💾 Database integration
-* 🌙 Dark mode
-* 🌍 Multi-language support
-* 💰 Multiple currencies
-* 📊 Admin dashboard
-
----
-
-## 📌 Project Goals
-
-This project was created to demonstrate how a modern e-commerce interface can be built with a focus on:
-
-* Modern frontend development
-* Component-based architecture
-* Responsive UI
-* Reusable components
-* Clean design
-* Performance
-* Accessibility
-* Maintainability
-* Real-world e-commerce UX
-
----
+--- -->
+ 
 
 ## 👨‍💻 Author
 
@@ -367,7 +313,7 @@ Full-Stack Web Developer focused on modern web applications with React, TypeScri
 ### Connect
 
 * GitHub: [abdolkarim-dev](https://github.com/abdolkarim-dev)
-* LinkedIn: [Abdolkarim Bazdar](https://www.linkedin.com/in/abdolkarim-bazdar/)
+* LinkedIn: [Abdolkarim Bazdar](https://www.linkedin.com/in/abdolkarim-bazdar-2b2ba6107/)
 
 ---
 

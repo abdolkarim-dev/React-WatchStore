@@ -1,5 +1,5 @@
-function Home() {
+function CartProvider() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default CartProvider;

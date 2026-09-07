@@ -1,5 +1,5 @@
-function Home() {
+function Button() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default Button;

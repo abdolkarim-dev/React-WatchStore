@@ -1,5 +1,5 @@
-function Home() {
+function formatPrice() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default formatPrice;

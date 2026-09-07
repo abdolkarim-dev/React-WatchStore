@@ -1,5 +1,5 @@
-function Home() {
+function NotFound() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default NotFound;

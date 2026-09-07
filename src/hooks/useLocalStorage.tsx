@@ -1,5 +1,5 @@
-function Home() {
+function useLocalStorage() {
   return <div>ss</div>;
 }
 
-export default Home;
+export default useLocalStorage;
