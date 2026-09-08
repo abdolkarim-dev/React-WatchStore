@@ -47,7 +47,7 @@ function About() {
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] bg-[#e6e2da]">
               <img
-                src="./src/images/products/7.jpg"
+                src="./src/assets/images/products/7.jpg"
                 alt="AbdOlkarim Watch watch"
                 className="h-[560px] w-full object-cover"
               />
@@ -97,7 +97,7 @@ function About() {
           <div className="order-2 lg:order-1">
             <div className="overflow-hidden rounded-[2rem] bg-[#e8e5df]">
               <img
-                src="./src/images/products/13.jpg"
+                src="./src/assets/images/products/8.jpg"
                 alt="Watch craftsmanship"
                 className="h-[520px] w-full object-cover"
               />

@@ -83,7 +83,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/7.jpg"
+                src="./src/assets/images/products/7.jpg"
                 alt="classNameic Silver"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -108,10 +108,10 @@ function Watches() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
               <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
                 ♡
-              </button>
+              </button> 
 
               <img
-                src="./src/images/products/8.jpg"
+                src="./src/assets/images/products/8.jpg"
                 alt="Noir Edition"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -142,7 +142,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/9.jpg"
+                src="./src/assets/images/products/9.jpg"
                 alt="Gold Heritage"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -175,7 +175,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/10.jpg"
+                src="./src/assets/images/products/10.jpg"
                 alt="Steel Automatic"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -206,7 +206,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/11.jpg"
+                src="./src/assets/images/products/11.jpg"
                 alt="Heritage Brown"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -233,7 +233,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/12.jpg"
+                src="./src/assets/images/products/12.jpg"
                 alt="Sport Black"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -264,7 +264,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/13.jpg"
+                src="./src/assets/images/products/13.jpg"
                 alt="Royal Gold"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -297,7 +297,7 @@ function Watches() {
               </button>
 
               <img
-                src="./src/images/products/14.jpg"
+                src="./src/assets/images/products/14.jpg"
                 alt="Minimal Steel"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />

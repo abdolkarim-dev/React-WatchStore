@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import routes from "../../Routes";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,7 +8,7 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const location = useLocation();
   return (
     <header
       id="headerMenu"
@@ -22,30 +24,17 @@ function Header() {
         </a>
         {/* Navigation Desktop */}
         <nav className="hidden items-center gap-8 md:flex">
-          <a
-            href="#"
-            className="text-sm font-medium transition hover:text-[#8b7355]"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-sm text-black/60 transition hover:text-[#8b7355]"
-          >
-            Watches
-          </a>
-          <a
-            href="#"
-            className="text-sm text-black/60 transition hover:text-[#8b7355]"
-          >
-            Collections
-          </a>
-          <a
-            href="#"
-            className="text-sm text-black/60 transition hover:text-[#8b7355]"
-          >
-            About
-          </a>
+          {routes.map((nav) => {
+            const isActive = location.pathname === nav.path;
+            return (
+              <a
+                href={nav.path}
+                className={`text-sm font-medium transition ${isActive ? "hover:text-[#8b7355]" : "text-[#8b7355]"} `}
+              >
+                {nav.name}
+              </a>
+            );
+          })}
         </nav>
 
         {/* Mobile Menu */}
