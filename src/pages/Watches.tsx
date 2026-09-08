@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Watches() {
   return (
     <>
@@ -5,11 +7,9 @@ function Watches() {
       <section className="mx-auto max-w-7xl px-6 pb-10 pt-12 lg:px-8">
         {/* <!-- Breadcrumb --> */}
         <div className="mb-10 flex items-center gap-2 text-xs text-black/40">
-          <a href="#" className="transition hover:text-black">
-            {" "}
-            Home{" "}
-          </a>
-
+          <Link to="/" className="transition hover:text-black">
+            Home
+          </Link>
           <span>/</span>
 
           <span className="text-black"> Watches </span>
@@ -108,7 +108,7 @@ function Watches() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
               <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
                 ♡
-              </button> 
+              </button>
 
               <img
                 src="./src/assets/images/products/8.jpg"

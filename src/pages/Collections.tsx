@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Collections() {
   return (
@@ -7,10 +8,9 @@ export default function Collections() {
       <section className="mx-auto max-w-7xl px-6 pb-14 pt-12 lg:px-8">
         {/* <!-- Breadcrumb --> */}
         <div className="mb-12 flex items-center gap-2 text-xs text-black/40">
-          <a href="#" className="transition hover:text-black">
-            {" "}
-            Home{" "}
-          </a>
+          <Link to="/" className="transition hover:text-black">
+            Home
+          </Link>
 
           <span>/</span>
 
@@ -40,7 +40,7 @@ export default function Collections() {
           className="group relative block min-h-[500px] overflow-hidden rounded-[2rem] bg-[#d9d6cf]"
         >
           <img
-            src="./src/images/products/20.jpg"
+            src="./src/assets/images/products/20.jpg"
             alt="The Essential Collection"
             className="absolute inset-0 h-full w-full object-cover transition duration-1000 group-hover:scale-105"
           />
@@ -99,7 +99,7 @@ export default function Collections() {
               className="group relative min-h-[460px] overflow-hidden rounded-3xl bg-[#e7e4de]"
             >
               <img
-                src="./src/images/products/12.jpg"
+                src="./src/assets/images/products/12.jpg"
                 alt="classNameic Collection"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -128,7 +128,7 @@ export default function Collections() {
               className="group relative min-h-[460px] overflow-hidden rounded-3xl bg-[#e7e4de]"
             >
               <img
-                src="./src/images/products/13.jpg"
+                src="./src/assets/images/products/13.jpg"
                 alt="Luxury Collection"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -157,7 +157,7 @@ export default function Collections() {
               className="group relative min-h-[460px] overflow-hidden rounded-3xl bg-[#e7e4de]"
             >
               <img
-                src="./src/images/products/14.jpg"
+                src="./src/assets/images/products/14.jpg"
                 alt="Sport Collection"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -186,7 +186,7 @@ export default function Collections() {
               className="group relative min-h-[460px] overflow-hidden rounded-3xl bg-[#e7e4de]"
             >
               <img
-                src="./src/images/products/15.jpg"
+                src="./src/assets/images/products/15.jpg"
                 alt="Automatic Collection"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -247,7 +247,7 @@ export default function Collections() {
           {/* <!-- Image --> */}
           <div className="min-h-[400px]">
             <img
-              src="./src/images/products/16.jpg"
+              src="./src/assets/images/products/16.jpg"
               alt="AbdOlkarim Watch watch"
               className="h-full w-full object-cover"
             />
