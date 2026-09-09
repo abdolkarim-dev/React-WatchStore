@@ -1,5 +1,17 @@
 # ⌚ Abdolkarim — Modern Watch Store
 
+<div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+  <img src="public/images/Project/watchStore1.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+  <img src="public/images/Project/watchStore2.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+</div>
+<br/>
+<div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+  <img src="public/images/Project/watchStore3.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+  <img src="public/images/Project/watchStore4.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+</div>
+
+
+<br/><br/>
 A modern, elegant, and fully responsive watch store built with **React, Vite, and Tailwind CSS**.
 
 Abdolkarim is designed with a premium and minimal aesthetic, focusing on clean layouts, smooth interactions, responsive design, performance, and a consistent user experience across desktop, tablet, and mobile devices.
@@ -12,16 +24,16 @@ Abdolkarim is designed with a premium and minimal aesthetic, focusing on clean l
 
 The project includes a carefully designed storefront with:
 
-* 🏠 Modern Home page
-* ⌚ Watches / Products page
-* ✨ Collections page
-* 📖 About page
-* 🛒 Shopping cart experience
-* 👤 User account interface
-* 🔎 Search interface
-* 📱 Responsive mobile navigation
-* 📦 Product-focused UI
-* 🎨 Consistent design system
+- 🏠 Modern Home page
+- ⌚ Watches / Products page
+- ✨ Collections page
+- 📖 About page
+- 🛒 Shopping cart experience
+- 👤 User account interface
+- 🔎 Search interface
+- 📱 Responsive mobile navigation
+- 📦 Product-focused UI
+- 🎨 Consistent design system
 
 ---
 
@@ -29,22 +41,22 @@ The project includes a carefully designed storefront with:
 
 ### 🎨 Modern UI/UX
 
-* Clean and minimal visual design
-* Premium watch-store aesthetic
-* Consistent typography and spacing
-* Carefully designed buttons, cards, navigation and sections
-* Modern hover and transition effects
-* Balanced use of colors and whitespace
-* Responsive layouts throughout the application
+- Clean and minimal visual design
+- Premium watch-store aesthetic
+- Consistent typography and spacing
+- Carefully designed buttons, cards, navigation and sections
+- Modern hover and transition effects
+- Balanced use of colors and whitespace
+- Responsive layouts throughout the application
 
 ### 📱 Fully Responsive
 
 The entire interface is optimized for:
 
-* 📱 Mobile devices
-* 📲 Tablets
-* 💻 Laptops
-* 🖥️ Large desktop screens
+- 📱 Mobile devices
+- 📲 Tablets
+- 💻 Laptops
+- 🖥️ Large desktop screens
 
 The navigation and content automatically adapt to different screen sizes while maintaining a consistent user experience.
 
@@ -52,41 +64,41 @@ The navigation and content automatically adapt to different screen sizes while m
 
 The Watches section includes:
 
-* Product cards
-* Product images
-* Product names
-* Pricing
-* Sale pricing
-* New product badges
-* Wishlist actions
-* Quick-add interactions
-* Product categories
-* Sorting interface
-* Pagination
+- Product cards
+- Product images
+- Product names
+- Pricing
+- Sale pricing
+- New product badges
+- Wishlist actions
+- Quick-add interactions
+- Product categories
+- Sorting interface
+- Pagination
 
 ### ✨ Collections
 
 A dedicated collection experience with:
 
-* Featured collections
-* Classic watches
-* Luxury watches
-* Sport watches
-* Automatic watches
-* Collection-focused layouts
-* Promotional sections
+- Featured collections
+- Classic watches
+- Luxury watches
+- Sport watches
+- Automatic watches
+- Collection-focused layouts
+- Promotional sections
 
 ### 📖 About Page
 
 The About page introduces the brand through a storytelling-focused layout including:
 
-* Brand story
-* Brand philosophy
-* Craftsmanship
-* Timeless design
-* Brand values
-* Statistics
-* Call-to-action sections
+- Brand story
+- Brand philosophy
+- Craftsmanship
+- Timeless design
+- Brand values
+- Statistics
+- Call-to-action sections
 
 ---
 
@@ -97,7 +109,7 @@ The About page introduces the brand through a storytelling-focused layout includ
 | Technology                 | Purpose                     |
 | -------------------------- | --------------------------- |
 | ⚛️ React                   | UI development              |
-| ⚡ Vite                     | Development & build tooling |
+| ⚡ Vite                    | Development & build tooling |
 | 🎨 Tailwind CSS            | Styling & responsive design |
 | 🟦 JavaScript / TypeScript | Application logic           |
 | 🧭 React Router            | Client-side navigation      |
@@ -147,26 +159,26 @@ src/
 
 The homepage introduces the Abdolkarim brand with:
 
-* Hero section
-* Featured collection
-* Watch categories
-* Featured products
-* Promotional banner
-* Newsletter section
-* Brand features
+- Hero section
+- Featured collection
+- Watch categories
+- Featured products
+- Promotional banner
+- Newsletter section
+- Brand features
 
 ### Watches
 
 A product-focused page featuring:
 
-* Product grid
-* Categories
-* Sorting
-* Product badges
-* Pricing
-* Quick actions
-* Responsive product cards
-* Pagination
+- Product grid
+- Categories
+- Sorting
+- Product badges
+- Pricing
+- Quick actions
+- Responsive product cards
+- Pagination
 
 ### Collections
 
@@ -184,13 +196,13 @@ Abdolkarim was designed with a mobile-first mindset.
 
 The mobile interface includes a dedicated navigation experience with:
 
-* Responsive menu
-* Account access
-* Shopping cart
-* Touch-friendly controls
-* Optimized spacing
-* Mobile-friendly product grids
-* Adaptive typography
+- Responsive menu
+- Account access
+- Shopping cart
+- Touch-friendly controls
+- Optimized spacing
+- Mobile-friendly product grids
+- Adaptive typography
 
 Every major section has been reviewed to ensure it remains usable and visually balanced on smaller screens.
 
@@ -202,22 +214,20 @@ The project has been designed with performance and maintainability in mind.
 
 Optimization considerations include:
 
-* Vite-based production builds
-* Optimized responsive layouts
-* Reusable React components
-* Efficient Tailwind utility classes
-* Responsive image handling
-* Minimal unnecessary styling
-* Clean component structure
-* Reduced duplication
-* Mobile-friendly rendering
-* Smooth CSS transitions instead of unnecessary JavaScript animations
+- Vite-based production builds
+- Optimized responsive layouts
+- Reusable React components
+- Efficient Tailwind utility classes
+- Responsive image handling
+- Minimal unnecessary styling
+- Clean component structure
+- Reduced duplication
+- Mobile-friendly rendering
+- Smooth CSS transitions instead of unnecessary JavaScript animations
 
 The goal is to keep the interface visually rich while maintaining a fast and smooth experience.
 
 ---
-
- 
 
 ## 🛠️ Installation
 
@@ -302,7 +312,6 @@ Add your homepage screenshot here:
 ```
 
 --- -->
- 
 
 ## 👨‍💻 Author
 
@@ -312,8 +321,8 @@ Full-Stack Web Developer focused on modern web applications with React, TypeScri
 
 ### Connect
 
-* GitHub: [abdolkarim-dev](https://github.com/abdolkarim-dev)
-* LinkedIn: [Abdolkarim Bazdar](https://www.linkedin.com/in/abdolkarim-bazdar-2b2ba6107/)
+- GitHub: [abdolkarim-dev](https://github.com/abdolkarim-dev)
+- LinkedIn: [Abdolkarim Bazdar](https://www.linkedin.com/in/abdolkarim-bazdar-2b2ba6107/)
 
 ---
 
