@@ -46,7 +46,7 @@ export interface Product {
 
   specifications: ProductSpecifications;
 }
-export const products: Product[] = [
+ export const products: Product[] = [
   {
     id: 1,
     name: "Chrono Gold",
@@ -58,7 +58,7 @@ export const products: Product[] = [
     price: 2499,
     discountPrice: 2199,
     currency: "USD",
-    image: "/images/products/1.jpg",
+    image: "./src/assets/images/products/1.jpg",
     description:
       "A timeless luxury watch featuring a refined gold finish and automatic movement.",
     stock: 8,
@@ -90,7 +90,7 @@ export const products: Product[] = [
     price: 1299,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/2.jpg",
+    image: "./src/assets/images/products/2.jpg",
     description:
       "A sophisticated classic watch designed for elegant everyday wear.",
     stock: 15,
@@ -122,7 +122,7 @@ export const products: Product[] = [
     price: 1899,
     discountPrice: 1699,
     currency: "USD",
-    image: "/images/products/3.jpg",
+    image: "./src/assets/images/products/3.jpg",
     description:
       "A powerful sport watch built for adventure and underwater exploration.",
     stock: 6,
@@ -154,7 +154,7 @@ export const products: Product[] = [
     price: 3299,
     discountPrice: 2899,
     currency: "USD",
-    image: "/images/products/4.jpg",
+    image: "./src/assets/images/products/4.jpg",
     description:
       "An elegant luxury timepiece with a polished silver case and premium leather strap.",
     stock: 5,
@@ -186,7 +186,7 @@ export const products: Product[] = [
     price: 999,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/5.jpg",
+    image: "./src/assets/images/products/5.jpg",
     description:
       "A modern automatic watch combining urban design with mechanical precision.",
     stock: 21,
@@ -218,7 +218,7 @@ export const products: Product[] = [
     price: 2799,
     discountPrice: 2399,
     currency: "USD",
-    image: "/images/products/6.jpg",
+    image: "./src/assets/images/products/6.jpg",
     description:
       "A bold black luxury watch with a contemporary and powerful appearance.",
     stock: 9,
@@ -250,7 +250,7 @@ export const products: Product[] = [
     price: 1499,
     discountPrice: 1299,
     currency: "USD",
-    image: "/images/products/7.jpg",
+    image: "./src/assets/images/products/7.jpg",
     description:
       "A vintage-inspired timepiece with a warm brown leather strap.",
     stock: 11,
@@ -282,7 +282,7 @@ export const products: Product[] = [
     price: 1599,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/8.jpg",
+    image: "./src/assets/images/products/8.jpg",
     description:
       "A dynamic sport watch designed for performance and active lifestyles.",
     stock: 18,
@@ -314,7 +314,7 @@ export const products: Product[] = [
     price: 4599,
     discountPrice: 4199,
     currency: "USD",
-    image: "/images/products/9.jpg",
+    image: "./src/assets/images/products/9.jpg",
     description:
       "A premium gold timepiece created for formal occasions and refined style.",
     stock: 3,
@@ -346,7 +346,7 @@ export const products: Product[] = [
     price: 1199,
     discountPrice: 999,
     currency: "USD",
-    image: "/images/products/10.jpg",
+    image: "./src/assets/images/products/10.jpg",
     description: "A reliable blue sport watch made for outdoor adventures.",
     stock: 14,
     rating: 4.5,
@@ -377,7 +377,7 @@ export const products: Product[] = [
     price: 899,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/11.jpg",
+    image: "./src/assets/images/products/11.jpg",
     description: "A clean and elegant classic watch with a soft ivory dial.",
     stock: 24,
     rating: 4.3,
@@ -408,7 +408,7 @@ export const products: Product[] = [
     price: 2199,
     discountPrice: 1999,
     currency: "USD",
-    image: "/images/products/12.jpg",
+    image: "./src/assets/images/products/12.jpg",
     description: "A precision automatic watch with a modern mechanical design.",
     stock: 7,
     rating: 4.7,
@@ -439,7 +439,7 @@ export const products: Product[] = [
     price: 1099,
     discountPrice: 949,
     currency: "USD",
-    image: "/images/products/13.jpg",
+    image: "./src/assets/images/products/13.jpg",
     description: "A versatile silver watch with a clean modern profile.",
     stock: 19,
     rating: 4.4,
@@ -470,7 +470,7 @@ export const products: Product[] = [
     price: 1799,
     discountPrice: 1549,
     currency: "USD",
-    image: "/images/products/14.jpg",
+    image: "./src/assets/images/products/14.jpg",
     description:
       "A racing-inspired sport watch with a strong technical appearance.",
     stock: 10,
@@ -502,7 +502,7 @@ export const products: Product[] = [
     price: 2999,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/15.jpg",
+    image: "./src/assets/images/products/15.jpg",
     description: "A luxurious navy blue watch with an elegant polished case.",
     stock: 4,
     rating: 4.9,
@@ -533,7 +533,7 @@ export const products: Product[] = [
     price: 1399,
     discountPrice: 1199,
     currency: "USD",
-    image: "/images/products/16.jpg",
+    image: "./src/assets/images/products/16.jpg",
     description:
       "A rugged automatic watch inspired by classic exploration watches.",
     stock: 13,
@@ -565,7 +565,7 @@ export const products: Product[] = [
     price: 2399,
     discountPrice: 2099,
     currency: "USD",
-    image: "/images/products/17.jpg",
+    image: "./src/assets/images/products/17.jpg",
     description:
       "A refined black luxury watch designed for sophisticated evenings.",
     stock: 8,
@@ -597,7 +597,7 @@ export const products: Product[] = [
     price: 1699,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/18.jpg",
+    image: "./src/assets/images/products/18.jpg",
     description:
       "A vintage-inspired automatic watch featuring a distinctive bronze case.",
     stock: 9,
@@ -629,7 +629,7 @@ export const products: Product[] = [
     price: 799,
     discountPrice: 699,
     currency: "USD",
-    image: "/images/products/19.jpg",
+    image: "./src/assets/images/products/19.jpg",
     description:
       "A minimalist black watch designed for modern everyday outfits.",
     stock: 27,
@@ -661,7 +661,7 @@ export const products: Product[] = [
     price: 1999,
     discountPrice: 1749,
     currency: "USD",
-    image: "/images/products/20.jpg",
+    image: "./src/assets/images/products/20.jpg",
     description:
       "A durable performance watch built for demanding outdoor activities.",
     stock: 6,
@@ -693,7 +693,7 @@ export const products: Product[] = [
     price: 3899,
     discountPrice: 3499,
     currency: "USD",
-    image: "/images/products/21.jpg",
+    image: "./src/assets/images/products/21.jpg",
     description:
       "A luxurious heritage watch combining traditional design with modern precision.",
     stock: 5,
@@ -725,7 +725,7 @@ export const products: Product[] = [
     price: 1499,
     discountPrice: null,
     currency: "USD",
-    image: "/images/products/22.jpg",
+    image: "./src/assets/images/products/22.jpg",
     description: "A modern racing watch with a bold midnight-black design.",
     stock: 16,
     rating: 4.4,

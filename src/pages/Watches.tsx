@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { products } from "../data/products";
+import { useState } from "react";
 function Watches() {
+  const productsData = products;
+  
   return (
     <>
       {/* <!-- Page Header --> */}
@@ -32,7 +35,9 @@ function Watches() {
           </div>
 
           {/* <!-- Product Count --> */}
-          <p className="text-sm text-black/40">24 Products</p>
+          <p className="text-sm text-black/40">
+            {productsData.length} Products
+          </p>
         </div>
       </section>
       {/* <!-- Filters --> */}
@@ -72,249 +77,55 @@ function Watches() {
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
           {/* <!-- Product 01 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
-                New
-              </span>
+          {products &&
+            products.map((product) => {
+              return (
+                <article className="group">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
+                    {product.isNew && (
+                      <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
+                        New
+                      </span>
+                    )}
 
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm opacity-100 shadow-sm transition sm:right-4 sm:top-4">
-                ♡
-              </button>
+                    {product.isFeatured && (
+                      <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm opacity-100 shadow-sm transition sm:right-4 sm:top-4">
+                        ♡
+                      </button>
+                    )}
+                    <img
+                      src={product.image}
+                      alt="classNameic Silver"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
 
-              <img
-                src="./src/assets/images/products/7.jpg"
-                alt="classNameic Silver"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
+                    {/* <!-- Quick Add --> */}
+                    <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
+                      Quick Add
+                    </button>
+                  </div>
+                  <div className="mt-4">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-black/40">
+                      {product.brand}
+                    </p>
 
-              {/* <!-- Quick Add --> */}
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
+                    <h2 className="mt-1 text-sm font-medium">{product.name}</h2>
 
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
+                    <div className="mt-2 flex gap-3 text-[10px] text-black/40">
+                      <span>{product.specifications.caseMaterial}</span>
+                      <span>•</span>
+                      <span>{product.specifications.caseSize}</span>
+                      <span>•</span>
+                      <span>{product.specifications.movement}</span>
+                    </div>
 
-              <h2 className="mt-1 text-sm font-medium">classNameic Silver</h2>
-
-              <p className="mt-2 text-sm">$249.00</p>
-            </div>
-          </article>
-
-          {/* <!-- Product 02 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/8.jpg"
-                alt="Noir Edition"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Noir Edition</h2>
-
-              <p className="mt-2 text-sm">$329.00</p>
-            </div>
-          </article>
-
-          {/* <!-- Product 03 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <span className="absolute left-3 top-3 z-10 rounded-full bg-[#171717] px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider text-white sm:left-4 sm:top-4">
-                Sale
-              </span>
-
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/9.jpg"
-                alt="Gold Heritage"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Gold Heritage</h2>
-
-              <div className="mt-2 flex items-center gap-2">
-                <span className="text-sm"> $399.00 </span>
-
-                <span className="text-xs text-black/35 line-through">
-                  $499.00
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/* <!-- Product 04 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/10.jpg"
-                alt="Steel Automatic"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Steel Automatic</h2>
-
-              <p className="mt-2 text-sm">$449.00</p>
-            </div>
-          </article>
-
-          {/* <!-- Product 05 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
-                New
-              </span>
-
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/11.jpg"
-                alt="Heritage Brown"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Heritage Brown</h2>
-
-              <p className="mt-2 text-sm">$289.00</p>
-            </div>
-          </article>
-
-          {/* <!-- Product 06 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/12.jpg"
-                alt="Sport Black"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Sport Black</h2>
-
-              <p className="mt-2 text-sm">$359.00</p>
-            </div>
-          </article>
-
-          {/* <!-- Product 07 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <span className="absolute left-3 top-3 z-10 rounded-full bg-[#171717] px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider text-white sm:left-4 sm:top-4">
-                Sale
-              </span>
-
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/13.jpg"
-                alt="Royal Gold"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Royal Gold</h2>
-
-              <div className="mt-2 flex items-center gap-2">
-                <span className="text-sm"> $379.00 </span>
-
-                <span className="text-xs text-black/35 line-through">
-                  $459.00
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/* <!-- Product 08 --> */}
-          <article className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-              <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm shadow-sm sm:right-4 sm:top-4">
-                ♡
-              </button>
-
-              <img
-                src="./src/assets/images/products/14.jpg"
-                alt="Minimal Steel"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                Quick Add
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-[11px] text-black/40">AbdOlkarim Watch</p>
-
-              <h2 className="mt-1 text-sm font-medium">Minimal Steel</h2>
-
-              <p className="mt-2 text-sm">$319.00</p>
-            </div>
-          </article>
+                    <div className="mt-3">
+                      <p className="text-sm font-medium">${product.price}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
         </div>
 
         {/* <!-- Pagination --> */}
@@ -337,7 +148,7 @@ function Watches() {
             →
           </button>
         </div>
-      </section>{" "}
+      </section>
     </>
   );
 }

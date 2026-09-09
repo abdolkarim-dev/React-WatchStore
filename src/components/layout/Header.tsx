@@ -51,41 +51,22 @@ function Header() {
             </div>
 
             <div className="space-y-2">
-              <a
-                href="#"
-                className="group flex items-center justify-between rounded-2xl bg-white px-5 py-4 shadow-sm transition hover:bg-[#171717] hover:text-white"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium"> Home </span>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="group flex items-center justify-between rounded-2xl px-5 py-4 transition hover:bg-white hover:shadow-sm"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium"> Watches </span>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="group flex items-center justify-between rounded-2xl px-5 py-4 transition hover:bg-white hover:shadow-sm"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium"> Collections </span>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="group flex items-center justify-between rounded-2xl px-5 py-4 transition hover:bg-white hover:shadow-sm"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium"> About </span>
-                </div>
-              </a>
+              {routes.map((nav) => {
+                const isActive = location.pathname === nav.path;
+                return (
+                  <a
+                    href={nav.path}
+                    className={`group flex items-center justify-between rounded-2xl px-5 py-4 transition 
+                  
+                  ${isActive ? "bg-white shadow-sm  hover:bg-[#171717] hover:text-white" : "hover:bg-white hover:shadow-sm"}
+                  `}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm font-medium"> {nav.name} </span>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
 

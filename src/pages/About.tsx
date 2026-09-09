@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function About() {
   return (
     <>
@@ -5,10 +7,9 @@ function About() {
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-12 lg:px-8">
         {/* <!-- Breadcrumb --> */}
         <div className="mb-12 flex items-center gap-2 text-xs text-black/40">
-          <a href="#" className="transition hover:text-black">
-            {" "}
-            Home{" "}
-          </a>
+        <Link to="/" className="transition hover:text-black">
+            Home
+          </Link>
 
           <span>/</span>
 
