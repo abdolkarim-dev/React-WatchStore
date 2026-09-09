@@ -1,13 +1,10 @@
 # ⌚ Abdolkarim — Modern Watch Store
 
-<div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-  <img src="public/images/Project/watchStore1.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
-  <img src="public/images/Project/watchStore2.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
-</div>
-<br/>
-<div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-  <img src="public/images/Project/watchStore3.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
-  <img src="public/images/Project/watchStore4.png" style="width:48%; max-width:400px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+<div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+  <img src="public/images/Project/watchStore1.png" style="width:23%; min-width:150px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+  <img src="public/images/Project/watchStore2.png" style="width:23%; min-width:150px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+  <img src="public/images/Project/watchStore3.png" style="width:23%; min-width:150px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
+  <img src="public/images/Project/watchStore4.png" style="width:23%; min-width:150px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
 </div>
 
 
