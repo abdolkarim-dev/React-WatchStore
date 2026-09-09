@@ -3,7 +3,24 @@ import { products } from "../data/products";
 import { useState } from "react";
 function Watches() {
   const productsData = products;
-  
+  const [currentPage, setCurrentPage] = useState(1);
+  const productPrePage = 8;
+
+  const indexOfLastProduct = currentPage * productPrePage;
+  const indexOfFitstProduct = indexOfLastProduct - productPrePage;
+  const currentProduct = productsData.slice(
+    indexOfFitstProduct,
+    indexOfLastProduct,
+  );
+
+  const totalPages = Math.ceil(productsData.length / productPrePage);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  const pageNumbers = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
   return (
     <>
       {/* <!-- Page Header --> */}
@@ -77,8 +94,7 @@ function Watches() {
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
           {/* <!-- Product 01 --> */}
-          {products &&
-            products.map((product) => {
+          { currentProduct.map((product) => {
               return (
                 <article className="group">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
@@ -129,25 +145,50 @@ function Watches() {
         </div>
 
         {/* <!-- Pagination --> */}
-        <div className="mt-16 flex items-center justify-center gap-2">
-          <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#171717] text-xs text-white">
-            1
-          </button>
+        {totalPages > 1 && (
+          <div className="mt-16 flex items-center justify-center gap-2">
+            {/* دکمه قبلی */}
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`flex h-10 w-10 items-center justify-center rounded-full text-xs transition ${
+                currentPage === 1
+                  ? "cursor-not-allowed text-black/20"
+                  : "text-black/50 hover:bg-white hover:text-black"
+              }`}
+            >
+              ←
+            </button>
 
-          <button className="flex h-10 w-10 items-center justify-center rounded-full text-xs text-black/50 transition hover:bg-white hover:text-black">
-            2
-          </button>
+            {/* دکمه‌های شماره صفحات */}
+            {pageNumbers.map((number) => (
+              <button
+                key={number}
+                onClick={() => paginate(number)}
+                className={`flex h-10 w-10 items-center justify-center rounded-full text-xs transition ${
+                  currentPage === number
+                    ? "bg-[#171717] text-white"
+                    : "text-black/50 hover:bg-white hover:text-black"
+                }`}
+              >
+                {number}
+              </button>
+            ))}
 
-          <button className="flex h-10 w-10 items-center justify-center rounded-full text-xs text-black/50 transition hover:bg-white hover:text-black">
-            3
-          </button>
-
-          <span className="px-2 text-black/30"> ... </span>
-
-          <button className="flex h-10 w-10 items-center justify-center rounded-full text-xs text-black/50 transition hover:bg-white hover:text-black">
-            →
-          </button>
-        </div>
+            {/* دکمه بعدی */}
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`flex h-10 w-10 items-center justify-center rounded-full text-xs transition ${
+                currentPage === totalPages
+                  ? "cursor-not-allowed text-black/20"
+                  : "text-black/50 hover:bg-white hover:text-black"
+              }`}
+            >
+              →
+            </button>
+          </div>
+        )}
       </section>
     </>
   );
