@@ -94,54 +94,54 @@ function Watches() {
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
           {/* <!-- Product 01 --> */}
-          { currentProduct.map((product) => {
-              return (
-                <article className="group">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
-                    {product.isNew && (
-                      <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
-                        New
-                      </span>
-                    )}
+          {currentProduct.map((product) => {
+            return (
+              <article className="group">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
+                  {product.isNew && (
+                    <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
+                      New
+                    </span>
+                  )}
 
-                    {product.isFeatured && (
-                      <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm opacity-100 shadow-sm transition sm:right-4 sm:top-4">
-                        ♡
-                      </button>
-                    )}
-                    <img
-                      src={product.image}
-                      alt="classNameic Silver"
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-
-                    {/* <!-- Quick Add --> */}
-                    <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
-                      Quick Add
+                  {product.isFeatured && (
+                    <button className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm opacity-100 shadow-sm transition sm:right-4 sm:top-4">
+                      ♡
                     </button>
+                  )}
+                  <img
+                    src={product.image}
+                    alt="classNameic Silver"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  {/* <!-- Quick Add --> */}
+                  <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
+                    Quick Add
+                  </button>
+                </div>
+                <div className="mt-4">
+                  <p className="text-[10px] uppercase tracking-[0.15em] text-black/40">
+                    {product.brand}
+                  </p>
+
+                  <h2 className="mt-1 text-sm font-medium">{product.name}</h2>
+
+                  <div className="mt-2 flex gap-3 text-[10px] text-black/40">
+                    <span>{product.specifications.caseMaterial}</span>
+                    <span>•</span>
+                    <span>{product.specifications.caseSize}</span>
+                    <span>•</span>
+                    <span>{product.specifications.movement}</span>
                   </div>
-                  <div className="mt-4">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-black/40">
-                      {product.brand}
-                    </p>
 
-                    <h2 className="mt-1 text-sm font-medium">{product.name}</h2>
-
-                    <div className="mt-2 flex gap-3 text-[10px] text-black/40">
-                      <span>{product.specifications.caseMaterial}</span>
-                      <span>•</span>
-                      <span>{product.specifications.caseSize}</span>
-                      <span>•</span>
-                      <span>{product.specifications.movement}</span>
-                    </div>
-
-                    <div className="mt-3">
-                      <p className="text-sm font-medium">${product.price}</p>
-                    </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-medium">${product.price}</p>
                   </div>
-                </article>
-              );
-            })}
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         {/* <!-- Pagination --> */}

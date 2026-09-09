@@ -46,14 +46,14 @@ export interface Product {
 
   specifications: ProductSpecifications;
 }
- export const products: Product[] = [
+export const products: Product[] = [
   {
     id: 1,
     name: "Chrono Gold",
     slug: "chrono-gold",
     brand: "Aurelius",
     category: "Luxury",
-    style: "Classic",
+    style: "Elegant",
     collection: "Heritage",
     price: 2499,
     discountPrice: 2199,

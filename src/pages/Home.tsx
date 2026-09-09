@@ -1,7 +1,10 @@
 import { Fragment } from "react/jsx-runtime";
-import productImage from '@/assets/images/products/1.jpg';
- 
+import { products } from "../data/products";
 function Home() {
+  const productData = products;
+  const productStyleCategory = productData.slice(0, 3);
+  const productFeaturedCategory = productData.slice(10, 14);
+
   return (
     <Fragment>
       <section className="mx-auto max-w-7xl px-6 pt-8 lg:px-8">
@@ -125,67 +128,31 @@ function Home() {
 
         <div className="grid gap-5 sm:grid-cols-3">
           {/* <!-- Category --> */}
-          <a
-            href="#"
-            className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
-          >
-            <img
-              src="/src/assets/images/products/1.jpg"
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              alt="classNameic watches"
-            />
+          {productStyleCategory.map((productStyle) => {
+            return (
+              <a
+                href="#"
+                className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
+              >
+                <img
+                  src={productStyle.image}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  alt="classNameic watches"
+                />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
-            <div className="absolute bottom-7 left-7 text-white">
-              <p className="text-xs uppercase tracking-widest text-white/60">
-                Collection
-              </p>
-              <h3 className="mt-1 text-2xl font-medium">classNameic</h3>
-            </div>
-          </a>
-
-          {/* <!-- Category --> */}
-          <a
-            href="#"
-            className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
-          >
-            <img
-              src="/src/assets/images/products/2.jpg"
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              alt="Luxury watches"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-
-            <div className="absolute bottom-7 left-7 text-white">
-              <p className="text-xs uppercase tracking-widest text-white/60">
-                Collection
-              </p>
-              <h3 className="mt-1 text-2xl font-medium">Luxury</h3>
-            </div>
-          </a>
-
-          {/* <!-- Category --> */}
-          <a
-            href="#"
-            className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#e5e1da]"
-          >
-            <img
-              src="/src/assets/images/products/3.jpg"
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              alt="Sport watches"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-
-            <div className="absolute bottom-7 left-7 text-white">
-              <p className="text-xs uppercase tracking-widest text-white/60">
-                Collection
-              </p>
-              <h3 className="mt-1 text-2xl font-medium">Sport</h3>
-            </div>
-          </a>
+                <div className="absolute bottom-7 left-7 text-white">
+                  <p className="text-xs uppercase tracking-widest text-white/60">
+                    Collection
+                  </p>
+                  <h3 className="mt-1 text-2xl font-medium">
+                    {productStyle.style}
+                  </h3>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </section>
 
@@ -213,102 +180,40 @@ function Home() {
 
           <div className="grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {/* <!-- Product --> */}
-            <article className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f4f3f0]">
-                <span className="absolute left-4 top-4 z-10 rounded-full bg-white px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider">
-                  New
-                </span>
+            {productFeaturedCategory.map((features) => {
+              return (
+                <article className="group">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f4f3f0]">
+                    {features.isNew && (
+                      <span className="absolute left-4 top-4 z-10 rounded-full bg-white px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider">
+                        New
+                      </span>
+                    )}
 
-                <button className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white opacity-0 shadow-sm transition group-hover:opacity-100">
-                  ♡
-                </button>
+                    {features.isFeatured && (
+                      <button className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white opacity-0 shadow-sm transition group-hover:opacity-100">
+                        ♡
+                      </button>
+                    )}
 
-                <img
-                  src="/src/assets/images/products/4.jpg"
-                  alt="AbdOlkarim Watch classNameic"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
+                    <img
+                      src={features.image}
+                      alt="AbdOlkarim Watch classNameic"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-              <div className="mt-4">
-                <p className="text-xs text-black/40">AbdOlkarim Watch</p>
-                <h3 className="mt-1 font-medium">classNameic Silver</h3>
-                <p className="mt-2 text-sm">$249.00</p>
-              </div>
-            </article>
-
-            {/* <!-- Product --> */}
-            <article className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f4f3f0]">
-                <button className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white opacity-0 shadow-sm transition group-hover:opacity-100">
-                  ♡
-                </button>
-
-                <img
-                  src="/src/assets/images/products/5.jpg"
-                  alt="AbdOlkarim Watch Black"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="mt-4">
-                <p className="text-xs text-black/40">AbdOlkarim Watch</p>
-                <h3 className="mt-1 font-medium">Noir Edition</h3>
-                <p className="mt-2 text-sm">$329.00</p>
-              </div>
-            </article>
-
-            {/* <!-- Product --> */}
-            <article className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f4f3f0]">
-                <span className="absolute left-4 top-4 z-10 rounded-full bg-[#171717] px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider text-white">
-                  Sale
-                </span>
-
-                <button className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white opacity-0 shadow-sm transition group-hover:opacity-100">
-                  ♡
-                </button>
-
-                <img
-                  src="/src/assets/images/products/6.jpg"
-                  alt="AbdOlkarim Watch Gold"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="mt-4">
-                <p className="text-xs text-black/40">AbdOlkarim Watch</p>
-                <h3 className="mt-1 font-medium">Gold Heritage</h3>
-
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="text-sm">$399.00</span>
-                  <span className="text-xs text-black/35 line-through">
-                    $499.00
-                  </span>
-                </div>
-              </div>
-            </article>
-
-            {/* <!-- Product --> */}
-            <article className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f4f3f0]">
-                <button className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white opacity-0 shadow-sm transition group-hover:opacity-100">
-                  ♡
-                </button>
-
-                <img
-                  src="/src/assets/images/products/7.jpg"
-                  alt="AbdOlkarim Watch Steel"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="mt-4">
-                <p className="text-xs text-black/40">AbdOlkarim Watch</p>
-                <h3 className="mt-1 font-medium">Steel Automatic</h3>
-                <p className="mt-2 text-sm">$449.00</p>
-              </div>
-            </article>
+                  <div className="mt-4">
+                    <p className="text-xs text-black/40">AbdOlkarim Watch</p>
+                    <h3 className="mt-1 font-medium">
+                      {" "}
+                      {features.style} {features.specifications.caseColor}
+                    </h3>
+                    <p className="mt-2 text-sm">${features.price}</p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
