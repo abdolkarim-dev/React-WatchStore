@@ -3,12 +3,13 @@ import Collections from "../pages/Collections";
 import About from "../pages/About";
 import Watches from "../pages/Watches";
 import Checkout from "../pages/Checkout";
-
+import Search from "../pages/Search";
 export const publicRoutes = [
   { name: "Home", path: "/", element: <Home /> },
+  { name: "Watches", path: "/watches", element: <Watches /> },
   { name: "Collections", path: "/collections", element: <Collections /> },
   { name: "About", path: "/about", element: <About /> },
-  { name: "Watches", path: "/watches", element: <Watches /> },
+  { name: "Search", path: "/search", element: <Search /> },
 ];
 
 export const standaloneRoutes = [

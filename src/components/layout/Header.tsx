@@ -3,7 +3,7 @@ import { publicRoutes } from "../../Routes";
 import { useLocation } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import CartDrawer from "../ui/CartDrawer";
-
+import { Link } from "react-router-dom";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
@@ -171,7 +171,7 @@ function Header() {
             </button>
 
             {/* Search */}
-            <button className="hidden md:block">
+            <Link to="/search" className="hidden md:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -186,7 +186,7 @@ function Header() {
                   d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
                 />
               </svg>
-            </button>
+            </Link>
 
             {/* Cart */}
             <button
