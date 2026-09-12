@@ -7,7 +7,6 @@
   <img src="public/images/Project/watchStore4.png" style="width:23%; min-width:150px; aspect-ratio:16/9; object-fit:cover; object-position:top; border-radius:8px;" />
 </div>
 
-
 <br/><br/>
 A modern, elegant, and fully responsive watch store built with **React, Vite, and Tailwind CSS**.
 
@@ -116,34 +115,57 @@ The About page introduces the brand through a storytelling-focused layout includ
 ## 📂 Project Structure
 
 ```text
-src/
-│
-├── assets/
-│   ├── images/
-│   └── fonts/
-│
-├── components/
-│   ├── Header/
-│   ├── Footer/
-│   ├── Navigation/
-│   ├── ProductCard/
-│   └── ...
-│
-├── pages/
-│   ├── Home/
-│   ├── Watches/
-│   ├── Collections/
-│   ├── About/
-│   └── ...
-│
-├── layouts/
-│
-├── data/
-│
-├── routes/
-│
-├── App.jsx
-└── main.jsx
+react-watch-store
+├─ eslint.config.js
+├─ index.html
+├─ LICENSE
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.svg
+│  ├─ fonts
+│  ├─ icons.svg
+│  └─ images
+│     └─ Project
+├─ README.md
+├─ src
+│  ├─ App.tsx
+│  ├─ assets
+│  │  └─ images
+│  │     ├─ header_site.png
+│  │     └─ products
+│  ├─ components
+│  │  ├─ layout
+│  │  │  ├─ Footer.tsx
+│  │  │  ├─ Header.tsx
+│  │  │  ├─ Layout.tsx
+│  │  │  └─ Navbar.tsx
+│  │  └─ ui
+│  │     └─ CartDrawer.tsx
+│  ├─ context
+│  │  └─ CartContext.tsx
+│  ├─ data
+│  │  └─ products.tsx
+│  ├─ hooks
+│  ├─ index.css
+│  ├─ main.tsx
+│  ├─ pages
+│  │  ├─ About.tsx
+│  │  ├─ Cart.tsx
+│  │  ├─ Checkout.tsx
+│  │  ├─ Collections.tsx
+│  │  ├─ Home.tsx
+│  │  ├─ NotFound.tsx
+│  │  └─ Watches.tsx
+│  ├─ Routes
+│  │  └─ index.tsx
+│  └─ utils
+│     ├─ calculateTotal.tsx
+│     └─ formatPrice.tsx
+├─ tsconfig.app.json
+├─ tsconfig.json
+├─ tsconfig.node.json
+└─ vite.config.ts
 ```
 
 > The project structure is organized to keep reusable UI components separated from pages, layouts, assets, and application data.
