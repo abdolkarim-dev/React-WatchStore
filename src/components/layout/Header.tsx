@@ -28,6 +28,7 @@ function Header() {
             const isActive = location.pathname === nav.path;
             return (
               <a
+              key={nav.name}
                 href={nav.path}
                 className={`text-sm font-medium transition ${isActive ? "hover:text-[#8b7355]" : "text-[#8b7355]"} `}
               >
@@ -55,6 +56,7 @@ function Header() {
                 const isActive = location.pathname === nav.path;
                 return (
                   <a
+                  key={nav.name}
                     href={nav.path}
                     className={`group flex items-center justify-between rounded-2xl px-5 py-4 transition 
                   
