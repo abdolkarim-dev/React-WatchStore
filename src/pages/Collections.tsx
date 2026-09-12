@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { products } from "../data/products";
 
 export default function Collections() {
+    const productData = products;
+
   return (
     <>
       {/* <!-- Page Header --> */}
@@ -10,10 +13,8 @@ export default function Collections() {
         <div className="mb-12 flex items-center gap-2 text-xs text-black/40">
           <Link to="/" className="transition hover:text-black">
             Home
-          </Link>
-
-          <span>/</span>
-
+          </Link> 
+          <span>/</span> 
           <span className="text-black"> Collections </span>
         </div>
 
@@ -93,6 +94,7 @@ export default function Collections() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
+            
             {/* <!-- Collection 01 --> */}
             <a
               href="#"

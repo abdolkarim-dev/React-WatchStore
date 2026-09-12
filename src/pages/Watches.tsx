@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { Product } from "../data/products";
 function Watches() {
   const productsData = products;
   const [currentPage, setCurrentPage] = useState(1);
+  const [getCategory, setGetCategory] = useState("All");
+
+  // for Pagination
   const productPrePage = 8;
 
   const indexOfLastProduct = currentPage * productPrePage;
   const indexOfFitstProduct = indexOfLastProduct - productPrePage;
-  const currentProduct = productsData.slice(
-    indexOfFitstProduct,
-    indexOfLastProduct,
-  );
 
   const totalPages = Math.ceil(productsData.length / productPrePage);
 
@@ -21,6 +21,33 @@ function Watches() {
   for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);
   }
+
+  //get category
+  const categoryItems: Product[] = [];
+  productsData.forEach((product) => {
+    const exists = categoryItems.some(
+      (item) => item.category === product.category,
+    );
+    if (!exists) {
+      categoryItems.push(product);
+    }
+  });
+
+  // filter category
+  const filteredProducts: Product[] =
+    getCategory === "All"
+      ? productsData
+      : productsData.filter((item) => item.category === getCategory);
+
+  let currentProduct = filteredProducts.slice(
+    indexOfFitstProduct,
+    indexOfLastProduct,
+  );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [getCategory]);
+
   return (
     <>
       {/* <!-- Page Header --> */}
@@ -62,25 +89,23 @@ function Watches() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           {/* <!-- Categories --> */}
           <div className="flex gap-2 overflow-x-auto pb-1">
-            <button className="whitespace-nowrap rounded-full bg-[#171717] px-5 py-2.5 text-xs font-medium text-white">
+            <button
+              onClick={() => setGetCategory("All")}
+              className="whitespace-nowrap rounded-full bg-[#171717] px-5 py-2.5 text-xs font-medium text-white"
+            >
               All
             </button>
-
-            <button className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black">
-              classNameic
-            </button>
-
-            <button className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black">
-              Luxury
-            </button>
-
-            <button className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black">
-              Sport
-            </button>
-
-            <button className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black">
-              Automatic
-            </button>
+            {categoryItems.map((items) => {
+              return (
+                <button
+                  onClick={() => setGetCategory(items.category)}
+                  key={items.id}
+                  className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black"
+                >
+                  {items.category}
+                </button>
+              );
+            })}
           </div>
 
           {/* <!-- Sort --> */}
@@ -96,7 +121,7 @@ function Watches() {
           {/* <!-- Product 01 --> */}
           {currentProduct.map((product) => {
             return (
-              <article className="group">
+              <article key={product.id} className="group">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f2f1ee]">
                   {product.isNew && (
                     <span className="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-wider sm:left-4 sm:top-4">
@@ -145,9 +170,8 @@ function Watches() {
         </div>
 
         {/* <!-- Pagination --> */}
-        {totalPages > 1 && (
+        {filteredProducts.length > 8 && (
           <div className="mt-16 flex items-center justify-center gap-2">
-            {/* دکمه قبلی */}
             <button
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
@@ -160,7 +184,6 @@ function Watches() {
               ←
             </button>
 
-            {/* دکمه‌های شماره صفحات */}
             {pageNumbers.map((number) => (
               <button
                 key={number}
@@ -175,7 +198,6 @@ function Watches() {
               </button>
             ))}
 
-            {/* دکمه بعدی */}
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages}
