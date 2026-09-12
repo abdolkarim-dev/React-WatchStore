@@ -6,8 +6,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* صفحات اصلی سایت با Header و Footer */}
-          {publicRoutes.map((route) => (
+           {publicRoutes.map((route) => (
             <Route
               key={route.path}
               path={route.path}
@@ -15,8 +14,7 @@ function App() {
             />
           ))}
 
-          {/* صفحات مستقل بدون Header و Footer */}
-          {standaloneRoutes.map((route) => (
+           {standaloneRoutes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}
         </Routes>

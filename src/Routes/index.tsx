@@ -4,6 +4,7 @@ import About from "../pages/About";
 import Watches from "../pages/Watches";
 import Checkout from "../pages/Checkout";
 import Search from "../pages/Search";
+import NotFound from "../pages/NotFound";
 export const publicRoutes = [
   { name: "Home", path: "/", element: <Home /> },
   { name: "Watches", path: "/watches", element: <Watches /> },
@@ -14,4 +15,5 @@ export const publicRoutes = [
 
 export const standaloneRoutes = [
   { name: "Checkout", path: "/checkout", element: <Checkout /> },
+  { name: "Not Found", path: "/*", element: <NotFound /> },
 ];
