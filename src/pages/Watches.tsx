@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useEffect, useState } from "react";
 import type { Product } from "../data/products";
+import { useCart } from "../context/CartProvider";
+
 function Watches() {
+  const { valueCart, setValueCart } = useCart();
   const productsData = products;
   const [currentPage, setCurrentPage] = useState(1);
   const [getCategory, setGetCategory] = useState("All");
@@ -48,6 +51,21 @@ function Watches() {
     setCurrentPage(1);
   }, [getCategory]);
 
+  // add to cart
+  const addToCart = (item: Product) => {
+    setValueCart((prev) => {
+      const exists = prev.some((cartItem) => cartItem.id === item.id);
+
+      if (exists) {
+        return prev;
+      } 
+      return [...prev, item];
+    });
+  };
+
+  useEffect(() => {
+    console.log(valueCart);
+  }, [valueCart]);
   return (
     <>
       {/* <!-- Page Header --> */}
@@ -142,7 +160,10 @@ function Watches() {
                   />
 
                   {/* <!-- Quick Add --> */}
-                  <button className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
+                  >
                     Quick Add
                   </button>
                 </div>

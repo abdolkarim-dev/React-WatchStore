@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import routes from "../../Routes";
 import { useLocation } from "react-router-dom";
+import { useCart } from "../../context/CartProvider";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
   const location = useLocation();
+  const { valueCart } = useCart();
   return (
     <header
       id="headerMenu"
@@ -28,7 +30,7 @@ function Header() {
             const isActive = location.pathname === nav.path;
             return (
               <a
-              key={nav.name}
+                key={nav.name}
                 href={nav.path}
                 className={`text-sm font-medium transition ${isActive ? "hover:text-[#8b7355]" : "text-[#8b7355]"} `}
               >
@@ -56,7 +58,7 @@ function Header() {
                 const isActive = location.pathname === nav.path;
                 return (
                   <a
-                  key={nav.name}
+                    key={nav.name}
                     href={nav.path}
                     className={`group flex items-center justify-between rounded-2xl px-5 py-4 transition 
                   
@@ -193,7 +195,7 @@ function Header() {
               <circle cx="18" cy="20" r="1" />
             </svg>
             <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-[#171717] text-[9px] text-white">
-              2
+              {valueCart.length}
             </span>
           </button>
 
