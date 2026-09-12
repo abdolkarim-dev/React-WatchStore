@@ -58,7 +58,7 @@ function Watches() {
 
       if (exists) {
         return prev;
-      } 
+      }
       return [...prev, item];
     });
   };
