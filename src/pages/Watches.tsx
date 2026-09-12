@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useEffect, useState } from "react";
 import type { Product } from "../data/products";
-import { useCart } from "../context/CartProvider";
+import { useCart } from "../context/CartContext";
 
 function Watches() {
   const { valueCart, setValueCart } = useCart();
@@ -162,7 +162,9 @@ function Watches() {
                   {/* <!-- Quick Add --> */}
                   <button
                     onClick={() => addToCart(product)}
-                    className="absolute bottom-4 left-4 right-4 hidden rounded-full bg-white py-3 text-xs font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
+                    className="absolute bottom-4 left-4 right-4   rounded-full bg-white py-3 text-xs 
+                    font-medium shadow-lg transition hover:bg-[#171717] hover:text-white sm:block sm:translate-y-3 
+                    sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
                   >
                     Quick Add
                   </button>

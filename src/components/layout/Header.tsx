@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import routes from "../../Routes";
+import { publicRoutes } from "../../Routes";
 import { useLocation } from "react-router-dom";
-import { useCart } from "../../context/CartProvider";
+import { useCart } from "../../context/CartContext";
 import CartDrawer from "../ui/CartDrawer";
 
 function Header() {
@@ -31,7 +31,7 @@ function Header() {
           </a>
           {/* Navigation Desktop */}
           <nav className="hidden items-center gap-8 md:flex">
-            {routes.map((nav) => {
+            {publicRoutes.map((nav) => {
               const isActive = location.pathname === nav.path;
               return (
                 <a
@@ -59,7 +59,7 @@ function Header() {
               </div>
 
               <div className="space-y-2">
-                {routes.map((nav) => {
+                {publicRoutes.map((nav) => {
                   const isActive = location.pathname === nav.path;
                   return (
                     <a
@@ -116,6 +116,7 @@ function Header() {
               </a>
 
               <a
+                onClick={() => setCartOpen(true)}
                 href="#"
                 className="mt-2 flex items-center gap-4 rounded-2xl px-5 py-3.5 transition hover:bg-white"
               >
@@ -137,11 +138,14 @@ function Header() {
                     <circle cx="18" cy="20" r="1" />
                   </svg>
                   <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-[#171717] text-[8px] text-white">
-                    2
+                    {valueCart.length}
                   </span>
                 </div>
                 <span className="text-sm text-black/60"> Shopping Cart </span>
-                <span className="ml-auto text-xs text-black/30"> 2 items </span>
+                <span className="ml-auto text-xs text-black/30">
+                  {" "}
+                  {valueCart.length} items{" "}
+                </span>
               </a>
 
               <p className="mt-6 text-center text-[9px] uppercase tracking-[0.3em] text-black/25">

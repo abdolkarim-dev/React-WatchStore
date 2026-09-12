@@ -1,5 +1,5 @@
-import { useCart } from "../../context/CartProvider";
-
+import { useCart } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 type CartDrawerProps = {
   open: boolean;
   onClose: () => void;
@@ -7,7 +7,7 @@ type CartDrawerProps = {
 
 export default function CartDrawer({ open, onClose }: CartDrawerProps) {
   const { valueCart, setValueCart } = useCart();
-
+  const navigate = useNavigate();
   // Remove item from cart
   const removeItem = (id: number) => {
     setValueCart((prev) => prev.filter((item) => item.id !== id));
@@ -201,7 +201,13 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
               </p>
 
               {/* Checkout */}
-              <button className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[#171717] py-4 text-xs font-medium uppercase tracking-[0.15em] text-white transition hover:bg-[#8b7355]">
+              <button
+                onClick={() => {
+                  onClose();
+                  navigate("/checkout");
+                }}
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[#171717] py-4 text-xs font-medium uppercase tracking-[0.15em] text-white transition hover:bg-[#8b7355]"
+              >
                 Checkout
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
