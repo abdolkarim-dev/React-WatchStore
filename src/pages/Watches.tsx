@@ -58,7 +58,6 @@ function Watches() {
             Home
           </Link>
           <span>/</span>
-
           <span className="text-black"> Watches </span>
         </div>
 
@@ -91,7 +90,8 @@ function Watches() {
           <div className="flex gap-2 overflow-x-auto pb-1">
             <button
               onClick={() => setGetCategory("All")}
-              className="whitespace-nowrap rounded-full bg-[#171717] px-5 py-2.5 text-xs font-medium text-white"
+              className={`whitespace-nowrap rounded-full ${getCategory === "All" ? "bg-[#171717] text-white" : "border border-black/10 text-black/60 hover:border-black/30 hover:text-black "}  px-5 py-2.5
+                   text-xs font-medium transition `}
             >
               All
             </button>
@@ -100,7 +100,8 @@ function Watches() {
                 <button
                   onClick={() => setGetCategory(items.category)}
                   key={items.id}
-                  className="whitespace-nowrap rounded-full border border-black/10 px-5 py-2.5 text-xs font-medium text-black/60 transition hover:border-black/30 hover:text-black"
+                  className={`whitespace-nowrap rounded-full ${getCategory === items.category ? "bg-[#171717] text-white" : "border border-black/10 text-black/60 hover:border-black/30 hover:text-black "}  px-5 py-2.5
+                   text-xs font-medium transition `}
                 >
                   {items.category}
                 </button>
